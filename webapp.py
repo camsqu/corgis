@@ -11,3 +11,7 @@ def render_main():
 @app.route("/about")
 def render_about():
     return render_template('about.html')
+
+app.route("/overall")
+def render_overall():
+    return render_template('overall.html')
