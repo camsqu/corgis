@@ -1,40 +1,51 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:300,400" rel="stylesheet">
-<style>
-h1 {
-  font-family: 'Open Sans', sans-serif;
-  position: relative;
-  bottom 30px;
-}
-p {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
-}
-a {
-  font-family: 'Montserrat', sans-serif;
-}
-ul {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
-}
-p.dhs {
-  font-weight: bold;
-}
-img {
-  width: 35%;
-  position: relative;
-  top: 28px;
-}
-</style>
-</head>
-<body>
-<h1>CORGIS Data Lab <img src="http://blog.iavm.org/wp-content/uploads/2014/08/DHS_Seal_Hi-Res.jpg"></h1>
-<p>This data is from the CORGIS Dataset Project and can be found at <a href="https://think.cs.vt.edu/corgis/json/immigration/immigration.html">https://think.cs.vt.edu/corgis/json/immigration/immigration.html</a></p>
-<p>This data contains statistics about immigration into the United States from countries around the world between 2005-2014. Including data such as <ul><li>Enforcement of Immigration Security</li><li>Naturalizations</li><li>Legal Permanent Residences</li><li>Nonimmigrant Admissions</li></ul> </p>
-<p>The source of this data is from the United States Department of Homeland Security and can be found at <a href="https://www.dhs.gov/immigration-statistics/yearbook">https://www.dhs.gov/immigration-statistics/yearbook</a></p>
-<p>The data is collected every year by the Department of Homeland Security in "The Yearbook", here is how the DHS explains the data.</p>
-<p class="dhs">The Yearbook of Immigration Statistics is a compendium of tables that provides data on foreign nationals who, during a fiscal year, were granted lawful permanent residence (i.e., admitted as immigrants or became legal permanent residents), were admitted into the United States on a temporary basis (e.g., tourists, students, or workers), applied for asylum or refugee status, or were naturalized. The Yearbook also presents data on immigration enforcement actions, including alien apprehensions, removals, and returns. The Yearbook tables are released as they become available. A final PDF is released in September of the following fiscal year.</p>
-</body>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <style>
+      h1 {
+        position: relative;
+        left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Immigration Dataset Project</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="#">About</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Data <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Overall</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+<h1>Immigration Dataset | What you need to know</h1>
+  </body>
 </html>
