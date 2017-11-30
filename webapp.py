@@ -23,3 +23,8 @@ def render_overall():
 def number_of_countries():
     countryTotal = {}
     country = countries[0]['Country']
+    for c in countries
+        if countries[0]['Country'] = countryTotal
+        return
+    else
+    return country
