@@ -52,7 +52,7 @@ def country_response(state):
             return "The immigration data for " + z["Country"] + " is " + str(z["Data"]["Enforcement"])
 @app.route("/response")
 def render_response():
-    state = request.args['Country']
+    country = request.args['Country']
     return render_template("countrydata.html",value=get_country_options(),fact=country_response(request.args["Country"]))
 
 if __name__ == '__main__':
