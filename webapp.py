@@ -21,8 +21,11 @@ def render_overall():
     return render_template('overall.html')
 
 def number_of_countries():
-    countryTotal = {}
+    countryTotal = []
     country = countries[0]["Country"]
     for c in countries:
         if c["Country"] in countryList:
-            countryList[c["Country"]]=countryList[c["Country"]]+1
+            countryTotal.append([c["Country"]])
+
+if __name__ == '__main__':
+    app.run(debug=True)
