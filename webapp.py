@@ -52,7 +52,7 @@ def country_response(state):
 @app.route("/response")
 def render_response():
     state = request.args['Country']
-    return render_template("countrydata.html",value=get_country_options(),fact=state_response(request.args["Country"]))
+    return render_template("countrydata.html",value=get_country_options(),fact=country_response(request.args["Country"]))
 
 if __name__ == '__main__':
     app.run(debug=True)
