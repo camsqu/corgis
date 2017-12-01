@@ -22,7 +22,8 @@ def render_overall():
 
 @app.route("/databycountry")
 def render_cdata():
-    return render_template('countrydata.html')
+    countryvalue = get_country_options()
+    return render_template('countrydata.html', value = countryvalue)
 
 def number_of_countries():
     countryTotal = []
