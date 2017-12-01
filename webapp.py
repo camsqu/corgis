@@ -46,7 +46,7 @@ def get_country_options():
          return value
 def country_response(state):
     with open('static/immigration.json') as immigration_data:
-        counties = json.load(immigration_data)
+        countries = json.load(immigration_data)
     for z in countries:
         if z["Country"] == country:
             return "The immigration data for " + z["Country"] + " is " + str(z["Data"]["Enforcement"])
