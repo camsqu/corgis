@@ -44,7 +44,7 @@ def get_country_options():
          for c in country:
             value += Markup("<option value=\"" + c + "\">" + c + "</option>")
          return value
-def country_response(state):
+def country_response(country):
     with open('static/immigration.json') as immigration_data:
         countries = json.load(immigration_data)
     for z in countries:
