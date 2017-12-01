@@ -5,7 +5,7 @@ import json
 app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  Otherwise, it is the name of the file (ex. webapp)
 
 def main():
-    with open('immigration.json') as immigration_data:
+    with open('static/immigration.json') as immigration_data:
         countries = json.load(immigration_data)
 
 @app.route("/")
@@ -26,6 +26,29 @@ def number_of_countries():
     for c in countries:
         if c["Country"] in countryList:
             countryTotal.append([c["Country"]])
+
+def get_country_options():
+     with open('static/immigration.json') as immigration_data:
+         countries = json.load(immigration_data)
+         count = 0
+         country = []
+         for c in countries:
+             if c["Country"] not in country:
+                 country.append(c["Country"])
+                 value = ""
+         for c in country:
+            value += Markup("<option value=\"" + s + "\">" + s + "</option>")
+         return value
+def country_response(state):
+    with open('static/immigration.json') as immigration_data:
+        counties = json.load(immigration_data)
+    for z in countries:
+        if z["Country"] == country:
+            return "The immigration data for " + z["Country"] + " is " + str(z["Data"]["Enforcement"])
+@app.route("/response")
+def render_response():
+    state = request.args['Country']
+    return render_template("countrydata.html",value=get_country_options(),fact=state_response(request.args["Country"]))
 
 if __name__ == '__main__':
     app.run(debug=True)
