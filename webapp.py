@@ -20,6 +20,10 @@ def render_about():
 def render_overall():
     return render_template('overall.html')
 
+@app.route("/databycountry")
+def render_cdata():
+    return render_template('countrydata.html')
+
 def number_of_countries():
     countryTotal = []
     country = countries[0]["Country"]
