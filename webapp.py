@@ -50,6 +50,7 @@ def country_response(country):
     for z in countries:
         if z["Country"] == country:
             return "Immigration data for " + z["Country"] + " Enforcement:" + " Non-criminal:" + str(z["Data"]["Enforcement"])
+            # formatting this return line requires creating a jinja variable for the seperate parts of this line and implement into the HTML code.
 @app.route("/response")
 def render_response():
     country = request.args['Country']
