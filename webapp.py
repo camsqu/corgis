@@ -49,7 +49,7 @@ def country_response(country):
         countries = json.load(immigration_data)
     for z in countries:
         if z["Country"] == country:
-            return "Immigration data for " + z["Country"] + " Enforcement:" + " Non-criminal:" + str(z["Data"]["Enforcement"])
+            return ("Immigration data for " + z["Country"]) + " Enforcement:" + " Non-criminal:" + str(z["Data"]["Enforcement"])
 @app.route("/response")
 def render_response():
     country = request.args['Country']
