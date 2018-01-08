@@ -25,6 +25,18 @@ def render_cdata():
     countryvalue = get_country_options()
     return render_template('countrydata.html', value = countryvalue)
 
+@app.route("/admissions")
+def render_admit():
+    return render_template('admissions.html')
+
+@app.route("/yeardata")
+def render_ydata():
+    return render_template('yeardata.html')
+
+@app.route("/visual")
+def render_visual():
+    return render_template('visual.html')
+
 def number_of_countries():
     countryTotal = []
     country = countries[0]["Country"]
