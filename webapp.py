@@ -31,7 +31,7 @@ def render_admit():
 
 @app.route("/yeardata")
 def render_ydata():
-    return render_template('yeardata.html')
+    return render_template('yeardata.html', value = yearvalue)
 
 @app.route("/visual")
 def render_visual():
@@ -68,5 +68,17 @@ def render_response():
     country = request.args['Country']
     return render_template("countrydata.html",value=get_country_options(),fact=country_response(request.args["Country"]))
 
+def country_year_data():
+    with open('static/immigration.json') as immigration_data:
+        countries = json.load(immigration_data)
+        count = 0
+        year = []
+        for c in countries:
+            if c["Year"] not in year:
+                year.append(c["Year"])
+                value = ""
+        for c in year:
+           value += Markup("<option value=\"" + c + "\">" + c + "</option>")
+        return value
 if __name__ == '__main__':
     app.run(debug=True)
