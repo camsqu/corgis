@@ -80,5 +80,18 @@ def country_year_data():
         for c in year:
            value += Markup("<option value=\"" + c + "\">" + c + "</option>")
         return value
+
+def year_response(year):
+    with open('static/immigration.json') as immigration_data:
+        countries = json.load(immigration_data)
+    for z in countries:
+        if z["Year"] == year:
+            return "Immigration data for " + z["Year"] + " Enforcement:" + " Non-criminal:" + str(z["Data"]["Enforcement"])
+            # formatting this return line requires creating a jinja variable for the seperate parts of this line and implement into the HTML code.
+@app.route("/response")
+def render_response():
+    country = request.args['Year']
+    return render_template("yeardata.html",value=country_year_data(),fact=year_response(request.args["Year"]))
+    
 if __name__ == '__main__':
     app.run(debug=True)
