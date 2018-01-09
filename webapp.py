@@ -31,6 +31,7 @@ def render_admit():
 
 @app.route("/yeardata")
 def render_ydata():
+    yearvalue = country_year_data()
     return render_template('yeardata.html', value = yearvalue)
 
 @app.route("/visual")
@@ -61,7 +62,7 @@ def country_response(country):
         countries = json.load(immigration_data)
     for z in countries:
         if z["Country"] == country:
-            return "Immigration data for " + z["Country"] + " Enforcement:" + " Non-criminal:" + str(z["Data"]["Enforcement"])
+            return "Immigration data for " + z["Country"] + " || Enforcement: " + str(z["Data"]["Enforcement"])
             # formatting this return line requires creating a jinja variable for the seperate parts of this line and implement into the HTML code.
 @app.route("/response")
 def render_response():
